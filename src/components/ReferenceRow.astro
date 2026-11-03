@@ -1,0 +1,11 @@
+---
+import type {CollectionEntry} from 'astro:content';
+import { href, referenceType, referenceGroup, type Lang } from '../lib/site';
+const {reference,lang}=Astro.props as {reference:CollectionEntry<'references'>;lang:Lang};
+const r=reference.data;
+---
+<article class="reference-row" data-accent={r.accent} data-reference data-group={referenceGroup(r.type)}>
+  <div class="reference-meta">{referenceType(r.type,lang)}{r.year && <small>{r.journal ? `${r.journal} · ` : ''}{r.year}</small>}{r.status && <small>{r.status}</small>}</div>
+  <div><h3><a href={href(lang,`references/${r.key}`)}>{r.title}</a></h3><p>{r.shortDescription}</p><div class="tags">{r.tags.slice(0,3).map(tag=><span class="tag">{tag}</span>)}</div></div>
+  <span class="reference-arrow" aria-hidden="true">↗</span>
+</article>

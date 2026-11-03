@@ -1,0 +1,67 @@
+/* Change fonts, research colours and design principles here. */
+:root {
+  --font-body: 'Manrope Variable', system-ui, sans-serif;
+  --font-display: var(--font-body);
+  --font-size-base: 18px;
+  --leading-body: 1.75;
+  --space-section: clamp(4.5rem, 8vw, 7.5rem);
+  --page-width: 1280px;
+  --page-gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --radius: 5px;
+  --color-bg: #f7f7f2;
+  --color-surface: #ffffff;
+  --color-soft: #eeeee7;
+  --color-text: #222822;
+  --color-muted: #5d655e;
+  --color-line: #d7dcd2;
+  --color-brand: #465c35;
+  --color-brand-soft: #e5ecd9;
+  --color-on-brand: #ffffff;
+  --color-highlight: #d5ed9c;
+  --color-header: #f7f7f2ee;
+  --color-agentic: #6743a7;
+  --color-agentic-soft: #ece5f6;
+  --color-ai4se: #2e609b;
+  --color-ai4se-soft: #e1eaf5;
+  --color-quality: #26705c;
+  --color-quality-soft: #dfece5;
+  --color-devops: #a45320;
+  --color-devops-soft: #f7e8d9;
+  --color-architecture: #a14642;
+  --color-architecture-soft: #f4e2dc;
+  --color-ux: #7c651b;
+  --color-ux-soft: #f2edce;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --color-bg: #171d1a;
+  --color-surface: #202823;
+  --color-soft: #252e27;
+  --color-text: #edf0e7;
+  --color-muted: #b1bcb2;
+  --color-line: #3d4940;
+  --color-brand: #c6e49b;
+  --color-brand-soft: #2e3e28;
+  --color-on-brand: #202b1c;
+  --color-highlight: #c6e49b;
+  --color-header: #171d1aee;
+  --color-agentic: #c6a4ef;
+  --color-agentic-soft: #342c44;
+  --color-ai4se: #99bdec;
+  --color-ai4se-soft: #243548;
+  --color-quality: #8dccaf;
+  --color-quality-soft: #233b31;
+  --color-devops: #ecb07f;
+  --color-devops-soft: #433225;
+  --color-architecture: #eea7a0;
+  --color-architecture-soft: #442f2d;
+  --color-ux: #dcc77a;
+  --color-ux-soft: #3d3823;
+  color-scheme: dark;
+}
+[data-accent='agentic'] { --accent: var(--color-agentic); --accent-soft: var(--color-agentic-soft); }
+[data-accent='ai4se'] { --accent: var(--color-ai4se); --accent-soft: var(--color-ai4se-soft); }
+[data-accent='quality'] { --accent: var(--color-quality); --accent-soft: var(--color-quality-soft); }
+[data-accent='devops'] { --accent: var(--color-devops); --accent-soft: var(--color-devops-soft); }
+[data-accent='architecture'] { --accent: var(--color-architecture); --accent-soft: var(--color-architecture-soft); }
+[data-accent='ux'] { --accent: var(--color-ux); --accent-soft: var(--color-ux-soft); }

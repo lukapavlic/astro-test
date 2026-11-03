@@ -1,0 +1,14 @@
+---
+import { asset, href, t, type Lang } from '../lib/site';
+import type { CollectionEntry } from 'astro:content';
+interface Props { person:CollectionEntry<'people'>;lang:Lang;compact?:boolean }
+const {person,lang,compact=false} = Astro.props;
+const p=person.data;
+---
+<article class="person-card">
+  {p.image ? <div class="person-image"><img src={asset(p.image)} alt={p.name} loading="lazy" width="400" height="448" /></div> : <div class="person-image person-default" role="img" aria-label={t(lang,`Initials portrait for ${p.name}`,`Portret z začetnicami: ${p.name}`)}><span class="avatar-label">AGENTIC LAB / {p.memberType==='core'?t(lang,'RESEARCH','RAZISKOVANJE'):t(lang,'COLLABORATION','SODELOVANJE')}</span><span class="initials" aria-hidden="true">{p.name.split(' ').map(s=>s[0]).join('')}</span><span class="avatar-line" aria-hidden="true"></span></div>}
+  <h3>{p.memberType==='core'?<a href={href(lang,`people/${p.key}`)}>{p.name}</a>:p.name}</h3>
+  <p class="role">{p.labRole}</p>
+  {!compact && p.academicRole && <p class="academic">{p.academicRole}</p>}
+  {p.researchAreas.length>0 && <div class="tags">{p.researchAreas.slice(0,compact?2:3).map(tag=><span class="tag">{tag}</span>)}</div>}
+</article>

@@ -1,0 +1,5 @@
+---
+import {t,type Lang} from '../lib/site';
+const {lang}=Astro.props as {lang:Lang};
+---
+<div class="cta-panel"><div><h2>{t(lang,'Explore how agentic software engineering could work in your organization.','Raziščimo, kako bi agentno programsko inženirstvo lahko uporabili v vašem okolju.')}</h2><p>{t(lang,'A good starting point is a conversation about your engineering context.','Dobro izhodišče je pogovor o vašem inženirskem okolju.')}</p></div><div><a class="button primary" href="mailto:luka.pavlic@um.si">{t(lang,'Discuss a collaboration','Pogovorimo se o sodelovanju')} <span aria-hidden="true">↗</span></a></div></div>

@@ -1,0 +1,8 @@
+---
+import { t, type Lang } from '../lib/site';
+import type { CollectionEntry } from 'astro:content';
+const {person,lang} = Astro.props as {person:CollectionEntry<'people'>;lang:Lang};
+const p=person.data;
+const links=[['FERI',p.feriUrl],['LinkedIn',p.linkedinUrl],['GitHub',p.githubUrl],['ORCID',p.orcidUrl],['Google Scholar',p.scholarUrl],[t(lang,'Website','Spletna stran'),p.websiteUrl]];
+---
+<div class="person-links">{p.email && <a href={`mailto:${p.email}`} aria-label={`${t(lang,'Email','E-pošta')}: ${p.name}`}>{p.email} ↗</a>}{links.filter(([,url])=>url).map(([label,url])=><a href={url} aria-label={`${p.name} — ${label}`}>{label} ↗</a>)}</div>

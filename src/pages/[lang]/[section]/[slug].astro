@@ -1,0 +1,40 @@
+---
+import {getCollection,render,type CollectionEntry} from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import ReferenceRow from '../../../components/ReferenceRow.astro';
+import PersonLinks from '../../../components/PersonLinks.astro';
+import {href,asset,t,dateLabel,referenceType,eventType,type Lang} from '../../../lib/site';
+export async function getStaticPaths(){
+  const result=[];
+  for(const section of ['research','references','events','people'] as const){
+    for(const entry of await getCollection(section)){
+      if(section==='people' && (entry as CollectionEntry<'people'>).data.memberType!=='core')continue;
+      result.push({params:{lang:entry.data.lang,section,slug:entry.data.key},props:{entry,section}});
+    }
+  }
+  return result;
+}
+const {entry,section}=Astro.props;
+const lang=entry.data.lang as Lang;
+const {Content}=await render(entry);
+const r=section==='references'?entry as CollectionEntry<'references'>:undefined;
+const p=section==='people'?entry as CollectionEntry<'people'>:undefined;
+const e=section==='events'?entry as CollectionEntry<'events'>:undefined;
+const area=section==='research'?entry as CollectionEntry<'research'>:undefined;
+const names:Record<string,string>={people:t(lang,'People','Ljudje'),research:t(lang,'Research','Raziskovanje'),references:t(lang,'References','Reference'),events:t(lang,'Events','Dogodki')};
+const related=p?(await getCollection('references')).filter(ref=>ref.data.lang===lang&&ref.data.contributors.includes(p.data.key)):[];
+---
+<Layout lang={lang} title={entry.data.title} description={entry.data.shortDescription} path={`${section}/${entry.data.key}`}>
+  <div class="container breadcrumb"><a href={href(lang,section)}>← {names[section]}</a></div>
+  {p?<section class="container detail-layout pb-24"><aside>{p.data.image?<div class="person-image"><img src={asset(p.data.image)} alt={p.data.name} width="400" height="448" loading="eager"/></div>:<div class="person-image person-default" role="img" aria-label={t(lang,`Initials portrait for ${p.data.name}`,`Portret z začetnicami: ${p.data.name}`)}><span class="avatar-label">AGENTIC LAB / {t(lang,'RESEARCH','RAZISKOVANJE')}</span><span class="initials" aria-hidden="true">{p.data.name.split(' ').map(x=>x[0]).join('')}</span><span class="avatar-line"></span></div>}<div class="side-note">{t(lang,'Information Systems Laboratory','Laboratorij za informacijske sisteme')}<br/>UM FERI · {t(lang,'University of Maribor','Univerza v Mariboru')}</div></aside><div><span class="eyebrow mb-5">AGENTIC LAB / {t(lang,'Core team','Osrednja ekipa')}</span><h1>{p.data.name}</h1><p class="role">{p.data.labRole}</p><p class="academic">{p.data.academicRole}</p><div class="prose"><Content/></div>{p.data.researchAreas.length>0&&<div class="tags">{p.data.researchAreas.map(tag=><span class="tag">{tag}</span>)}</div>}<PersonLinks person={p} lang={lang}/>{related.length>0&&<div class="mt-16"><h2 class="mb-8">{t(lang,'Related references','Povezane reference')}</h2><div class="reference-list">{related.map(reference=><ReferenceRow reference={reference} lang={lang}/>)}</div></div>}</div></section>:<>
+    <section class="container detail-heading" data-accent={r?.data.accent||area?.data.accent||'quality'}><span class="eyebrow">{r?referenceType(r.data.type,lang):names[section]}{r?.data.year&&` / ${r.data.year}`}</span>{e?.data.demo&&<p class="mt-5"><span class="demo-note">{t(lang,'Fictional demo event — replace before announcing a real event.','Izmišljen demo dogodek — zamenjajte pred napovedjo dejanskega dogodka.')}</span></p>}<h1>{entry.data.title}</h1><p class="detail-description">{entry.data.shortDescription}</p></section>
+    <section class="section container split-content"><aside>
+      {r&&<dl class="info-panel"><dt>{t(lang,'Type','Vrsta')}</dt><dd>{referenceType(r.data.type,lang)}</dd>{r.data.status&&<><dt>{t(lang,'Status','Stanje')}</dt><dd>{r.data.status}</dd></>}{r.data.authors.length>0&&<><dt>{t(lang,'Authors','Avtorji')}</dt><dd>{r.data.authors.join(', ')}</dd></>}{r.data.journal&&<><dt>{t(lang,'Published in','Objavljeno v')}</dt><dd>{r.data.journal} {r.data.volume}({r.data.issue}), {r.data.articleNumber} ({r.data.year})</dd></>}{r.data.publishedOnline&&<><dt>{t(lang,'Published online','Spletna objava')}</dt><dd>{dateLabel(`${r.data.publishedOnline}T12:00:00Z`,lang)}</dd></>}{r.data.doi&&<><dt>DOI</dt><dd><a href={`https://doi.org/${r.data.doi}`}>{r.data.doi} ↗</a></dd></>}{r.data.externalUrl&&<><dt>{t(lang,'Source','Vir')}</dt><dd><a href={r.data.externalUrl}>{t(lang,'View source','Odpri vir')} ↗</a></dd></>}</dl>}
+      {e&&<dl class="info-panel"><dt>{t(lang,'Date','Datum')}</dt><dd><time datetime={e.data.date}>{dateLabel(e.data.date,lang)}</time></dd><dt>{t(lang,'Location','Lokacija')}</dt><dd>{e.data.location}</dd><dt>{t(lang,'Format','Oblika')}</dt><dd>{eventType(e.data.eventType,lang)}</dd>{e.data.price&&<><dt>{t(lang,'Admission','Udeležba')}</dt><dd>{e.data.price}</dd></>}{e.data.speakers.length>0&&<><dt>{t(lang,'Speakers','Govorci')}</dt><dd>{e.data.speakers.join(', ')}</dd></>}{e.data.externalUrl&&<><dt>{t(lang,'Details','Podrobnosti')}</dt><dd><a href={e.data.externalUrl}>{t(lang,'Event website','Spletna stran dogodka')} ↗</a></dd></>}</dl>}
+      {area&&<div class="side-note"><strong>{t(lang,'Connected research','Povezano raziskovanje')}</strong><p>{t(lang,'Systematic, measurable and reusable engineering approaches.','Sistematični, merljivi in ponovno uporabljivi inženirski pristopi.')}</p><a class="text-link mt-5" href={href(lang,'references')}>{t(lang,'Explore references','Raziščite reference')} ↗</a></div>}
+    </aside><div><div class="prose"><Content/></div>{r&&<div class="tags mt-8" data-accent={r.data.accent}>{r.data.tags.map(tag=><span class="tag">{tag}</span>)}</div>}{r?.data.sources.length? <div class="source-note"><strong>{t(lang,'Metadata source','Vir metapodatkov')}</strong>{r.data.sources.map(url=><a href={url}>Crossref ↗</a>)}<p>{t(lang,'Bibliographic metadata and summary checked against publisher-deposited records.','Bibliografski podatki in povzetek so preverjeni v zapisih, ki jih je deponiral založnik.')}</p></div>:null}</div></section>
+  </>}
+</Layout>
+<style>
+.detail-heading{padding-block:1rem 0;max-width:var(--page-width)}.detail-heading>.eyebrow{color:var(--accent)}.detail-heading h1{margin-top:1.5rem;max-width:25ch;font-size:clamp(2rem,4vw,3.5rem)}.detail-description{color:var(--color-muted);font-size:1.05rem;margin-top:1.7rem;max-width:70ch}.source-note{border-top:1px solid var(--color-line);padding-top:1.5rem;margin-top:3rem;font-size:.73rem;color:var(--color-muted)}.source-note strong{display:block;margin-bottom:.5rem}.source-note>a{display:inline-block;margin-right:1rem;color:var(--color-brand)}.source-note p{margin-top:.5rem}
+</style>

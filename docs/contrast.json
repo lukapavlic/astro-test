@@ -1,0 +1,134 @@
+[
+  {
+    "theme": "light",
+    "text": "text",
+    "background": "bg",
+    "ratio": 14.01
+  },
+  {
+    "theme": "light",
+    "text": "muted",
+    "background": "bg",
+    "ratio": 5.6
+  },
+  {
+    "theme": "light",
+    "text": "muted",
+    "background": "soft",
+    "ratio": 5.17
+  },
+  {
+    "theme": "light",
+    "text": "brand",
+    "background": "bg",
+    "ratio": 6.87
+  },
+  {
+    "theme": "light",
+    "text": "on-brand",
+    "background": "brand",
+    "ratio": 7.39
+  },
+  {
+    "theme": "light",
+    "text": "agentic",
+    "background": "agentic-soft",
+    "ratio": 5.82
+  },
+  {
+    "theme": "light",
+    "text": "ai4se",
+    "background": "ai4se-soft",
+    "ratio": 5.3
+  },
+  {
+    "theme": "light",
+    "text": "quality",
+    "background": "quality-soft",
+    "ratio": 4.86
+  },
+  {
+    "theme": "light",
+    "text": "devops",
+    "background": "devops-soft",
+    "ratio": 4.56
+  },
+  {
+    "theme": "light",
+    "text": "architecture",
+    "background": "architecture-soft",
+    "ratio": 4.83
+  },
+  {
+    "theme": "light",
+    "text": "ux",
+    "background": "ux-soft",
+    "ratio": 4.76
+  },
+  {
+    "theme": "dark",
+    "text": "text",
+    "background": "bg",
+    "ratio": 14.85
+  },
+  {
+    "theme": "dark",
+    "text": "muted",
+    "background": "bg",
+    "ratio": 8.72
+  },
+  {
+    "theme": "dark",
+    "text": "muted",
+    "background": "soft",
+    "ratio": 7.14
+  },
+  {
+    "theme": "dark",
+    "text": "brand",
+    "background": "bg",
+    "ratio": 12.2
+  },
+  {
+    "theme": "dark",
+    "text": "on-brand",
+    "background": "brand",
+    "ratio": 10.52
+  },
+  {
+    "theme": "dark",
+    "text": "agentic",
+    "background": "agentic-soft",
+    "ratio": 6.26
+  },
+  {
+    "theme": "dark",
+    "text": "ai4se",
+    "background": "ai4se-soft",
+    "ratio": 6.46
+  },
+  {
+    "theme": "dark",
+    "text": "quality",
+    "background": "quality-soft",
+    "ratio": 6.54
+  },
+  {
+    "theme": "dark",
+    "text": "devops",
+    "background": "devops-soft",
+    "ratio": 6.44
+  },
+  {
+    "theme": "dark",
+    "text": "architecture",
+    "background": "architecture-soft",
+    "ratio": 6.31
+  },
+  {
+    "theme": "dark",
+    "text": "ux",
+    "background": "ux-soft",
+    "ratio": 6.99
+  }
+]

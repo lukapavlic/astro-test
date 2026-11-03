@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { asset, href, t, type Lang } from '../lib/site';
+interface Props {lang:Lang;title:string;description:string;path?:string}
+const { lang,title,description,path='' } = Astro.props;
+const canonical = Astro.site ? new URL(href(lang,path),Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>try{var p=localStorage.getItem('agentic-theme');document.documentElement.dataset.theme=p==='light'||p==='dark'?p:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
+    <title>{title} | Agentic Lab</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical}/>}
+    {(['sl','en'] as Lang[]).map(l=><link rel="alternate" hreflang={l} href={Astro.site ? new URL(href(l,path),Astro.site).href : href(l,path)}/>)}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | Agentic Lab`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={lang==='sl'?'sl_SI':'en_GB'} />
+    <meta property="og:site_name" content="Agentic Lab" />
+    {canonical && <meta property="og:url" content={canonical}/>}
+    <meta property="og:image" content={Astro.site ? new URL(asset('images/social.png'),Astro.site).href : asset('images/social.png')} />
+    <meta property="og:image:alt" content="Agentic Lab — Building software with AI agents." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')} />
+  </head>
+  <body>
+    <a class="skip" href="#main">{t(lang,'Skip to content','Preskoči na vsebino')}</a>
+    <Header lang={lang} path={path}/>
+    <main id="main" tabindex="-1"><slot /></main>
+    <Footer lang={lang} path={path}/>
+  </body>
+</html>

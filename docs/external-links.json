@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://api.crossref.org/works/10.3390/app14010319",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://api.crossref.org/works/10.3390/app142412006",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://doi.org/10.3390/app14010319",
+    "status": "403",
+    "exit": 0
+  },
+  {
+    "url": "https://doi.org/10.3390/app142412006",
+    "status": "403",
+    "exit": 0
+  },
+  {
+    "url": "https://feri.um.si/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://github.com/alenrajsp",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/en/person/luka-pavlic/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/alen-rajsp/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/lidija-vincekovic/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/luka-cetina/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/marjan-hericko/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/tina-beranic/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/vasilka-saklamaeva/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://ii.feri.um.si/sl/person/viktor-taneski/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://orcid.org/0000-0001-5477-4747",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://orcid.org/0000-0001-6518-5876",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://orcid.org/0009-0005-0221-4840",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "url": "https://si.linkedin.com/in/tina-berani%C4%8D-94662315",
+    "status": "999",
+    "exit": 0
+  },
+  {
+    "url": "https://si.linkedin.com/in/viktortaneski",
+    "status": "999",
+    "exit": 0
+  },
+  {
+    "url": "https://www.linkedin.com/in/alen-raj%C5%A1p-29606912a/",
+    "status": "999",
+    "exit": 0
+  },
+  {
+    "url": "https://www.mdpi.com/2076-3417/14/1/319",
+    "status": "403",
+    "exit": 0
+  },
+  {
+    "url": "https://www.mdpi.com/2076-3417/14/24/12006",
+    "status": "403",
+    "exit": 0
+  },
+  {
+    "url": "https://www.um.si/",
+    "status": "200",
+    "exit": 0
+  }
+]

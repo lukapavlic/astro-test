@@ -1,0 +1,49 @@
+---
+import { href, navigation, t, type Lang } from '../lib/site';
+interface Props { lang: Lang; path?: string }
+const { lang, path = '' } = Astro.props;
+const current = path.split('/')[0];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href={href(lang)} aria-label={t(lang,'Agentic Lab homepage','Agentic Lab — domača stran')}><span class="brand-symbol" aria-hidden="true"><i></i><i></i></span><span>agentic<span class="wordmark-light">lab</span><span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label={t(lang,'Main navigation','Glavna navigacija')}>
+      {navigation[lang].map(([slug,label]) => <a href={href(lang,slug)} aria-current={current === slug ? 'page' : undefined}>{label}</a>)}
+    </nav>
+    <div class="header-tools">
+      <div class="language-switch" role="group" aria-label={t(lang,'Language','Jezik')}>
+        {(['sl','en'] as Lang[]).map(l => <a href={href(l,path)} lang={l} hreflang={l} aria-current={l === lang ? 'true' : undefined} aria-label={l==='sl'?'Slovenščina':'English'}>{l.toUpperCase()}</a>)}
+      </div>
+      <label class="theme-control"><span aria-hidden="true">◐</span><span class="sr-only">{t(lang,'Colour theme','Barvna tema')}</span><select id="theme-select" aria-label={t(lang,'Colour theme','Barvna tema')}><option value="system">{t(lang,'System','Sistem')}</option><option value="light">{t(lang,'Light','Svetla')}</option><option value="dark">{t(lang,'Dark','Temna')}</option></select></label>
+      <details class="mobile-menu"><summary aria-label={t(lang,'Open navigation menu','Odpri navigacijski meni')}><span class="menu-lines" aria-hidden="true"></span></summary><nav aria-label={t(lang,'Mobile navigation','Mobilna navigacija')}>{navigation[lang].map(([slug,label],i) => <a href={href(lang,slug)} aria-current={current === slug ? 'page' : undefined}><span>0{i+1}</span>{label}<span aria-hidden="true">↗</span></a>)}</nav></details>
+    </div>
+  </div>
+</header>
+<script>
+  const select = document.querySelector<HTMLSelectElement>('#theme-select');
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  let preference = 'system';
+  try { const saved = localStorage.getItem('agentic-theme'); if (saved === 'light' || saved === 'dark') preference = saved; } catch { /* Storage is optional. */ }
+  const apply = () => { document.documentElement.dataset.theme = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference; };
+  if (select) { select.value = preference; select.addEventListener('change', () => { preference = select.value; try { if (preference === 'system') localStorage.removeItem('agentic-theme'); else localStorage.setItem('agentic-theme', preference); } catch {} apply(); }); }
+  media.addEventListener('change', apply);
+  window.addEventListener('storage', (event) => { if(event.key === 'agentic-theme') { preference = event.newValue === 'dark' || event.newValue === 'light' ? event.newValue : 'system'; if(select) select.value = preference; apply(); } });
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && menu?.open) { menu.open = false; menu.querySelector('summary')?.focus(); } });
+  document.addEventListener('click', (event) => { if(menu?.open && event.target instanceof Node && !menu.contains(event.target)) menu.open = false; });
+</script>
+<style>
+.site-header{position:sticky;top:0;z-index:50;background:var(--color-header);backdrop-filter:blur(18px);border-bottom:1px solid var(--color-line)}
+.header-inner{height:84px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.wordmark{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-size:1.4rem;line-height:1;font-weight:800;letter-spacing:-.07em;flex-shrink:0}
+.wordmark-light{font-weight:450}.brand-dot{color:var(--color-brand)}
+.brand-symbol{position:relative;display:block;width:25px;height:27px;transform:skew(-22deg)}.brand-symbol i{position:absolute;display:block;background:var(--color-brand);width:8px;height:27px;left:3px;top:0}.brand-symbol i+i{left:16px;top:14px;height:13px}
+.desktop-nav{display:flex;align-items:center;gap:1.4rem;margin-left:auto}.desktop-nav a{font-size:.69rem;line-height:1.5;font-weight:650;text-decoration:none;white-space:nowrap;padding:.6rem 0;border-bottom:2px solid transparent}.desktop-nav a:hover,.desktop-nav a[aria-current]{border-color:var(--color-brand);color:var(--color-brand)}
+.header-tools{display:flex;align-items:center;gap:1rem}.language-switch{display:flex;gap:.4rem}.language-switch a{display:grid;place-items:center;min-height:32px;min-width:24px;text-decoration:none;font-size:.65rem;font-weight:650;padding:.2rem;color:var(--color-muted)}.language-switch a[aria-current]{color:var(--color-text);border-bottom:1px solid currentColor}
+.theme-control{display:flex;align-items:center;gap:.2rem;font-size:.95rem;border-left:1px solid var(--color-line);padding-left:.7rem}.theme-control select{min-height:32px;background:transparent;border:0;font-size:.62rem;max-width:4.4rem;padding:.3rem 0;cursor:pointer}
+.mobile-menu{display:none}.mobile-menu summary{list-style:none;width:30px;height:38px;display:grid;place-items:center}.mobile-menu summary::-webkit-details-marker{display:none}.menu-lines{width:21px;height:10px;border-top:1.5px solid;border-bottom:1.5px solid;display:block}.mobile-menu[open] .menu-lines{border-bottom:0;transform:rotate(-45deg);height:0}.mobile-menu[open] .menu-lines::after{content:'';display:block;border-top:1.5px solid;transform:rotate(90deg);margin-top:-1px}
+.mobile-menu nav{position:absolute;top:100%;left:0;right:0;background:var(--color-bg);border-bottom:1px solid var(--color-line);padding:1rem var(--page-gutter) 2rem;box-shadow:0 25px 30px #00000010;max-height:calc(100dvh - 70px);overflow:auto}.mobile-menu nav a{display:flex;align-items:center;gap:1rem;text-decoration:none;font-size:1rem;padding:.85rem 0;border-bottom:1px solid var(--color-line)}.mobile-menu nav a span:first-child{font-size:.6rem;color:var(--color-muted)}.mobile-menu nav a span:last-child{margin-left:auto}.mobile-menu nav a[aria-current]{color:var(--color-brand)}
+@media(max-width:1200px){.desktop-nav{gap:.85rem}.header-inner{gap:1rem}.desktop-nav a{font-size:.63rem}.header-tools{gap:.6rem}}
+@media(max-width:1050px){.desktop-nav{display:none}.mobile-menu{display:block}.header-inner{height:72px}.header-tools{margin-left:auto;gap:1rem}}
+@media(max-width:400px){.wordmark{font-size:1.1rem}.theme-control select{max-width:3.5rem}.header-tools{gap:.6rem}.theme-control{padding-left:.5rem}.header-inner{gap:.6rem}.brand-symbol{display:none}}
+</style>
