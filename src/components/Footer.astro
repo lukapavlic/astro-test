@@ -4,7 +4,7 @@ const {lang,path=''} = Astro.props as {lang:Lang;path?:string};
 ---
 <footer>
   <div class="container footer-top">
-    <div class="footer-identity"><a class="footer-logo" href={href(lang)}>agenticlab<span>.</span></a><p>{t(lang,'Software engineering. With evidence.','Programsko inženirstvo. Z dokazi.')}</p><a class="text-link" href="mailto:luka.pavlic@um.si">luka.pavlic@um.si <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-identity"><a class="footer-logo" href={href(lang)}>agenticlab<span>.</span></a><p>{t(lang,'Software engineering. With evidence.','Programsko inženirstvo. Z dokazi.')}</p><a class="text-link" href="mailto:luka.pavlic@um.si">agentic.lab@um.si <span aria-hidden="true">↗</span></a></div>
     <div class="footer-institution"><span class="eyebrow">{t(lang,'Rooted in research','Raziskovalna podlaga')}</span><p>{t(lang,'Information Systems Laboratory (LIS)','Laboratorij za informacijske sisteme (LIS)')}<br/>{t(lang,'Institute of Informatics','Inštitut za informatiko')}<br/>{t(lang,'Faculty of Electrical Engineering and Computer Science','Fakulteta za elektrotehniko, računalništvo in informatiko')}</p><a href="https://feri.um.si/">{t(lang,'University of Maribor · UM FERI','Univerza v Mariboru · UM FERI')} ↗</a></div>
     <nav aria-label={t(lang,'Footer navigation','Navigacija v nogi')}>{navigation[lang].map(([slug,label])=><a href={href(lang,slug)}>{label}</a>)}</nav>
   </div>
