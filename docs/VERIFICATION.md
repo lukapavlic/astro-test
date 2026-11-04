@@ -54,3 +54,25 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 - Some official member pages have no research-interest detail; those profiles remain concise and do not invent tags.
 - Set the real `SITE_URL` (and `BASE_PATH` for project Pages) at deployment to generate production canonicals and sitemap. Without an origin, development intentionally has relative metadata and an empty sitemap.
 - Static calendar selection advances when rebuilt; no runtime event API or scheduled deployment was added.
+
+## Reference expansion — 4 November 2026
+
+- `npm run verify` passed after the publication and template changes: **0 errors, 0 warnings, 0 hints** across 23 files; **72 static HTML pages**, **70 translated routes**, **2,313 internal links/assets**, and all **5 calendar cases** passed.
+- An additional assertion pass over generated HTML confirmed all four new publications link bidirectionally with every mapped author profile and research area in **both languages**, the new testing review is featured on both homepages, and the chapter page range is present in both languages.
+- Safari desktop visual review: inspected the Slovenian reference list and selected **Objave**; the accessible live message reported **6** publications. Inspected the new Springer chapter detail, including the wrapping title, summary, linked author, book/series information, page range, DOI, distinct Crossref/Springer source labels and related research link. Followed that research link and confirmed the AI4SE page lists its four related publications.
+- During the development review, the running server initially retained an outdated content schema and omitted the newly added relationship/page fields. Restarting alone did not refresh it; changing the content configuration triggered a full content resync. The chapter then returned HTTP 200 and rendered the new fields and links correctly. Debug logging was removed. Static verification passed independently.
+- No mobile-width review or additional theme audit was performed for this change; the earlier mobile verification limitation remains. No deployment or push occurred.
+
+## Past-event archive — 4 November 2026
+
+- Final `npm run verify` passed: **0 errors, 0 warnings, 0 hints** across 24 files; **78 static HTML pages**, **76 translated routes**, **2,571 internal links/assets**; all **5 calendar cases** passed.
+- Additional generated-HTML assertions passed for all three events in both languages: explicit past/non-demo status; archive placement in reverse chronological order; absence from the upcoming homepage feature; bidirectional links with every mapped core speaker profile, research area and publication. Nadica Uzunova remains credited without inventing a profile or membership.
+- Safari desktop: visually inspected the past-event archive, including the September 2026 cards and their historical labels; the accessibility tree confirmed all three archived entries and verified dates. Opened the Evolucija.AI talk and visually inspected the full supplied Slovenian abstract, status/date/venue/Programi metadata and research links. Followed the linked speaker to Luka Pavlič’s profile and confirmed the reciprocal event entry in its “Predavanja in delavnice” section.
+- The new conference-talk label is bilingual. Existing demo event cards now explicitly say “Fictional demo event” / “Izmišljen demo dogodek”, matching the detail-page warning.
+- `git diff --check` passed. No mobile-width or additional theme audit was performed for this update. No deployment or push occurred.
+
+## Homepage affiliation strip — 4 November 2026
+
+- Removed the affiliation strip and its unused desktop/mobile CSS from the shared bilingual homepage template.
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets, and all 5 calendar cases.
+- Safari desktop visual review confirmed the Slovenian hero now leads directly into the six research perspectives, with normal section spacing and no affiliation strip.

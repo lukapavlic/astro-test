@@ -9,3 +9,23 @@
 7. [x] Document content editing, design, provenance and deployment. (AC01.3, AC04.1)
 8. [x] Run final type/build/link/content checks, inspect desktop/themes in Safari, fix findings and record actual verification. (AC10.3)
 9. [ ] Complete phone-width Safari visual review and mobile-menu interaction after approval for the temporary responsive-preview setting. See `VERIFICATION.md`; this check is not claimed as passed. (AC10.3)
+
+## Reference expansion — 4 November 2026
+
+- [x] Verify the four requested publications against publisher-deposited metadata and the accessible Springer abstract; retain raw Crossref records.
+- [x] Add matching Slovenian and English entries, with original titles, verified authors, DOI, publication dates and summaries.
+- [x] Connect publications bidirectionally with relevant research areas and existing author profiles; feature the latest testing review on the homepage.
+- [x] Support chapter page ranges and bibliography without empty issue fields.
+- [x] Run `npm run verify` and inspect the updated pages in Safari (details in `VERIFICATION.md`).
+
+## Past-event archive — 4 November 2026
+
+- [x] Verify dates, locations, presenters and workshop descriptions using official event sources and the user's talk abstract.
+- [x] Add three past events in Slovenian and English, preserving date-only values and the complete supplied Slovenian abstract.
+- [x] Connect event details with existing speaker profiles, research areas and related publications in both directions.
+- [x] Distinguish archive cards from upcoming events, retain the fictional demo label, and support reusable compact event rows on related pages.
+- [x] Run static verification, assert event relationships and archive placement, and review actual Safari rendering; record results in `VERIFICATION.md`.
+
+## Homepage affiliation strip — 4 November 2026
+
+- [x] Remove the UM FERI / Information Systems Laboratory affiliation strip between the hero and six research perspectives in both languages, including unused CSS.

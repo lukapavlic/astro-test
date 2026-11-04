@@ -4,6 +4,7 @@ key: "ai-scaled-agile"
 title: "The Potential of AI-Driven Assistants in Scaled Agile Software Development"
 shortDescription: "Sistematični pregled literature o pomočnikih UI pri agilnem razvoju v velikem obsegu, izzivih uvajanja in možnostih podpore."
 type: "publication"
+researchAreas: ["ai4se"]
 year: 2024
 authors: ["Vasilka Saklamaeva", "Luka Pavlič"]
 contributors: ["luka-pavlic", "vasilka-saklamaeva"]

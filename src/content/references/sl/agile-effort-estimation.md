@@ -4,6 +4,7 @@ key: "agile-effort-estimation"
 title: "Can Large-Language Models Replace Humans in Agile Effort Estimation? Lessons from a Controlled Experiment"
 shortDescription: "Kontrolirani eksperiment o generativni UI pri agilnem ocenjevanju napora, natančnosti ocen in podpori načrtovanju."
 type: "publication"
+researchAreas: ["ai4se"]
 year: 2024
 authors: ["Luka Pavlič", "Vasilka Saklamaeva", "Tina Beranič"]
 contributors: ["luka-pavlic", "vasilka-saklamaeva", "tina-beranic"]

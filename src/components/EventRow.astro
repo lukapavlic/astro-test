@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { href, t, dateLabel, eventType, isUpcoming, type Lang } from '../lib/site';
+const { event, lang } = Astro.props as { event: CollectionEntry<'events'>; lang: Lang };
+const e = event.data;
+---
+<article class="event-row">
+  <p class="event-row-meta"><time datetime={e.date}>{dateLabel(e.date, lang)}</time> · {eventType(e.eventType, lang)}{e.conference && ` · ${e.conference}`}</p>
+  <h3><a href={href(lang, `events/${e.key}`)}>{e.title}</a></h3>
+  <p>{e.shortDescription}</p>
+  <span class="tag">{isUpcoming(event) ? t(lang, 'Upcoming', 'Prihodnji dogodek') : t(lang, 'Past event', 'Pretekli dogodek')}</span>
+  {e.demo && <span class="demo-note">{t(lang, 'Fictional demo event', 'Izmišljen demo dogodek')}</span>}
+</article>
+<style>
+.event-row{padding-block:1.5rem;border-top:1px solid var(--color-line)}.event-row-meta{font-size:.7rem;color:var(--color-muted);margin-bottom:.6rem}.event-row h3{font-size:1.2rem}.event-row h3 a{text-decoration:none}.event-row h3 a:hover{color:var(--color-brand)}.event-row h3+p{color:var(--color-muted);font-size:.85rem;margin-block:.75rem}.event-row .tag{margin-top:.25rem}
+</style>
