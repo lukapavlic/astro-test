@@ -10,5 +10,5 @@
 - Core people: Luka Pavlič, Marjan Heričko, Tina Beranič, Viktor Taneski, Alen Rajšp, Vasilka Saklamaeva, Lidija Vincekovič, Luka Četina. External collaborators: Tjan Kazar, Tanej Buhin, Matic Kuhar, Patrik Kocmut, Ismar Mujezinović. Do not add unsupported collaborator details.
 - Use real verified professional portraits or the initials fallback. Do not add generic AI art, node networks, robots or decorative circuit graphics.
 - Keep dependencies minimal. Do not add unrequested features, analytics or cookie banners.
-- Run `npm run verify` before completing changes. Inspect the result visually for layout changes. Update `docs/PLAN.md` and `docs/VERIFICATION.md` when relevant. Do not claim unperformed checks passed.
+- Run `npm run verify` before completing changes. Inspect the result visually for layout changes. Always use Safari for browser work. Update `docs/PLAN.md` and `docs/VERIFICATION.md` when relevant. Do not claim unperformed checks passed.
 - Do not deploy or push unless explicitly requested. Production origin and base are supplied through `SITE_URL` and `BASE_PATH`; never invent a production domain.

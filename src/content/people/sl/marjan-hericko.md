@@ -9,7 +9,7 @@ academicRole: "Redni profesor"
 affiliation: "UM FERI · LIS"
 email: "marjan.hericko@um.si"
 feriUrl: "https://ii.feri.um.si/sl/person/marjan-hericko/"
-researchAreas: ["Programsko inženirstvo", "Agilne metode", "Programske metrike", "Ponovna uporaba"]
+researchAreas: ["Programsko inženirstvo", "Metode agilnega razvoja", "Programske metrike", "Ponovna uporaba", "Arhitekture programske opreme", "Kakovost programske opreme", "DevOps / DevSecOps"]
 memberType: "core"
 order: 2
 image: "/images/marjan-hericko.jpg"

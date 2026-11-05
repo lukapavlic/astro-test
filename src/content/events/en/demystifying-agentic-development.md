@@ -1,32 +1,39 @@
 ---
 lang: "en"
 key: "demystifying-agentic-development"
-title: "Demystifying Agentic Software Development"
-shortDescription: "A free public introduction to coding agents: what they can do, where they struggle, and what changes for software teams."
-date: "2026-11-26T17:00:00+01:00"
+title: "Building IT Applications and Services with AI Agents"
+shortDescription: "From Conversational AI to Autonomous Collaboration with Agents in the Development Process"
+date: "2026-12-03T09:00:00+01:00"
+endDate: "2026-12-03T13:00:00+01:00"
 location: "Maribor — location to be announced"
 eventType: "public-talk"
 status: "upcoming"
-demo: true
+demo: false
 featured: true
 price: "Free"
 order: 1
 ---
 
-<!-- DEMO CONTENT: Fictional, replaceable event requested for the initial website. Not an actual event announcement. -->
-## What will we explore?
+AI agents represent a new way of using generative artificial intelligence in the development of information solutions and services. Their role is not limited to writing code: they can participate throughout the entire development lifecycle, from understanding requirements and preparing specifications to planning, implementation, testing, deployment, and maintenance.
 
-What does agentic development actually mean? How does working with coding agents differ from asking a generative AI a question in a chat? We will look at what modern agents can do, where they need support, and what their use changes for developers and teams.
+In this four-hour lecture, we will explore how agentic development actually works, how to prepare requirements and specifications that agents can understand and use effectively, what modern AI agents are already capable of, and where their limitations lie. We will also address the choice between local and cloud-based agents, emerging security concerns, and the impact of AI agents on development processes and team roles. The lecture will include practical demonstrations.
 
-## Format
+The lecture is intended for developers, IT professionals, and companies that want to understand the possibilities, limitations, and practical use of AI agents in the development of information solutions and services.
 
-A public talk, a practical demonstration and an open Q&A. No previous experience with coding agents is required.
+## Topics
 
-## Who is it for?
-
-The general public, software developers, students and companies interested in understanding agentic development.
+- From generative AI to AI agents
+- The role of agents throughout the entire development lifecycle
+- How to prepare requirements, specifications, and context that agents can understand
+- Practical demonstration of an agentic development process
+- Implementation, testing, verification, deployment, and maintenance
+- Local agents vs. cloud-based agents
+- Emerging security challenges: access to code, data, tools, and development environments
+- What agents can do, where human involvement is still needed, and how to verify their results
+- Single-agent vs. multi-agent development
+- How agents are changing development processes and team roles
+- Open questions and discussion
 
 ## Practical information
 
 Admission is free. Maribor — location to be announced.
-

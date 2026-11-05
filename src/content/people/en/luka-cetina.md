@@ -9,7 +9,7 @@ academicRole: "Teaching Assistant"
 affiliation: "UM FERI · LIS"
 email: "luka.cetina@um.si"
 feriUrl: "https://ii.feri.um.si/sl/person/luka-cetina/"
-researchAreas: []
+researchAreas: ["DevOps / DevSecOps", "Software Engineering"]
 memberType: "core"
 order: 8
 ---

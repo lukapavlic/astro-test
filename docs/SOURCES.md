@@ -64,7 +64,7 @@ Research links are editorial topic associations: code completion → AI4SE and U
 
 The seven investigation entries, six focus areas, six collaboration formats, institutional context and strategic direction derive from the user's brief. They are research topics and proposed approaches, not fabricated completed projects, datasets, funding awards, benchmarks, clients or validated results. They have no invented completion dates or authors.
 
-The **26 November 2026 demo event is fictional**. It is labelled in Markdown and all public event presentations. Its city, free admission, broad audience and talk/demo/Q&A format were explicitly requested. No host, venue, named speakers, clock time or registration are announced. The stored timestamp is used for calendar sorting; the UI publishes only the requested date.
+The initial fictional event was replaced on **5 November 2026** with real event details supplied directly by the user: **Gradimo informacijske rešitve in storitve z agenti UI / Building IT Applications and Services with AI Agents**, **3 December 2026, 09:00–13:00 Europe/Ljubljana**. Both descriptions and topic lists come from the user's bilingual text; the final two English topics are also translated into Slovenian for parity. The event is no longer marked as a demo. Free admission and Maribor (venue to be announced) remain as confirmed by the user's instruction that other details are correct. No host, named speakers or registration are invented. The original content key and URLs are preserved.
 
 ## External-link checks
 
@@ -85,3 +85,7 @@ The user supplied and confirmed participation, titles and presenters for these t
 The web reader could not open the exact OTS workshop URLs, but direct requests returned their workshop content. Alternate official programme pages corroborated the relevant details. OTS entries use the verified city rather than guessing a room or venue. Dates are stored as date-only values; no session time is invented. All three entries have explicit `past` status and are translated in matching files.
 
 Research and publication associations are editorial topic links, not claims that the presentations formally reported the linked papers: Evolucija.AI → agentic engineering, AI4SE and quality; USERSTORY.md → agentic engineering and AI4SE; smart quality → AI4SE, quality and DevOps. Events link to related publications and existing speaker profiles, with reciprocal links on those detail pages.
+
+## People tags updated on 5 November 2026
+
+The user supplied the added research-interest tags for Luka Pavlič (software engineering and agile development methods), Marjan Heričko (software architecture, software quality and DevOps / DevSecOps), and Luka Četina (DevOps / DevSecOps and software engineering). Both languages are updated. “Agilne metode” / “Agile Methods” is renamed to “Metode agilnega razvoja” / “Agile Development Methods”. These direct user instructions supersede earlier statements about absent research-interest detail for these tags.

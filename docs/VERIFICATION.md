@@ -49,7 +49,7 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 
 ## Remaining replaceable content/configuration
 
-- The 26 November 2026 event is explicitly fictional and labelled on all event presentations. Replace it with verified real event information when ready.
+- The initial fictional event was replaced with user-confirmed real event information on 5 November 2026; see the update below.
 - Four core members and five external collaborators use designed initials profiles; add authorized real photographs if available.
 - Some official member pages have no research-interest detail; those profiles remain concise and do not invent tags.
 - Set the real `SITE_URL` (and `BASE_PATH` for project Pages) at deployment to generate production canonicals and sitemap. Without an origin, development intentionally has relative metadata and an empty sitemap.
@@ -76,3 +76,16 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 - Removed the affiliation strip and its unused desktop/mobile CSS from the shared bilingual homepage template.
 - `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets, and all 5 calendar cases.
 - Safari desktop visual review confirmed the Slovenian hero now leads directly into the six research perspectives, with normal section spacing and no affiliation strip.
+
+## Real upcoming event — 5 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints across 24 files; 78 static pages, 76 translated routes, 2,569 internal links/assets; all 5 calendar cases passed.
+- Both translations now use the user-confirmed title, description, topics and 3 December 2026, 09:00–13:00 Ljubljana timestamps, with `demo: false`. Existing URLs, location and admission are preserved. Featured cards, related rows and detail metadata share the localized date/time-range formatter; date-only archive entries keep date-only labels.
+- Safari desktop: visually inspected the Slovenian detail heading, description and date/time panel; switched to the equivalent English page and inspected the description/program layout. Accessibility state confirmed both updated titles, date/time range, all 11 topics per language, upcoming status and absence of a fictional-event notice.
+- No mobile-width or additional theme audit was performed. No deployment or push occurred. Browser work uses Safari, as requested.
+
+## People tags — 5 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets and all 5 calendar cases.
+- Generated-HTML assertions confirmed all tags render on the three updated profiles in both languages, without duplicate tags. No old “Agilne metode” / “Agile Methods” label remains in people content.
+- Safari desktop visual review of Luka Pavlič’s English profile confirmed the seven tags wrap cleanly, including Software Engineering and Agile Development Methods. Other profiles were checked in generated HTML; no additional mobile or theme review was performed.

@@ -29,3 +29,14 @@
 ## Homepage affiliation strip — 4 November 2026
 
 - [x] Remove the UM FERI / Information Systems Laboratory affiliation strip between the hero and six research perspectives in both languages, including unused CSS.
+
+## Real upcoming event — 5 November 2026
+
+- [x] Replace the fictional demo with user-confirmed bilingual titles, descriptions and topics for 3 December 2026, 09:00–13:00; preserve URLs and other metadata.
+- [x] Display the event time range on featured cards, related rows and event details using the Ljubljana timezone.
+- [x] Run `npm run verify` and visually review the updated event in Safari.
+
+## People tags — 5 November 2026
+
+- [x] Update the user-specified tags for Luka Pavlič, Marjan Heričko and Luka Četina in both languages, including the agile development methods label.
+- [x] Run verification, confirm all six generated profiles and visually inspect tag wrapping on Luka Pavlič’s English profile in Safari.

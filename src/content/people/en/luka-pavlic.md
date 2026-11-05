@@ -9,7 +9,7 @@ academicRole: "Associate Professor"
 affiliation: "UM FERI · LIS"
 email: "luka.pavlic@um.si"
 feriUrl: "https://ii.feri.um.si/en/person/luka-pavlic/"
-researchAreas: ["Agentic Software Engineering", "AI4SE", "Software Architecture", "Software Quality", "DevOps / DevSecOps"]
+researchAreas: ["Agentic Software Engineering", "AI4SE", "Software Architecture", "Software Quality", "DevOps / DevSecOps", "Software Engineering", "Agile Development Methods"]
 memberType: "core"
 order: 1
 image: "/images/luka-pavlic.jpg"
