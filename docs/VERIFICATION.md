@@ -109,3 +109,36 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 - `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
 - Generated HTML confirms corrected roles in all four translated profiles and both people lists. Lidija’s short description and body also use the new role.
 - Safari desktop: visually inspected Lidija’s Slovenian profile, including the role and updated description; accessibility state confirmed Viktor’s Slovenian profile says Docent. No mobile-width or additional theme review was performed.
+
+## Reference-derived logo — 6 November 2026
+
+- Final `npm run verify` passed: 0 errors/warnings/hints across 24 files; 78 static pages, 76 translated routes, 2,646 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Safari desktop: visually reviewed the generated header symbol alongside the existing wordmark, navigation and language/theme controls in light/system and dark appearances. The mask follows the central brand token; restored System afterward. An initial cached missing-image response was resolved with the versioned asset URL.
+- Confirmed the generated master has alpha transparency and created matching 256px header and 32px/192px icon assets. Shared layout uses base-aware PNG favicon links. Safari continued displaying its cached old tab icon during this session; updated browser-tab rendering is not claimed as visually verified. No phone-width review was performed.
+- Source, prompt and output paths are documented in `BRANDING.md`. No deployment or push occurred.
+
+## Logo colour-only revision - 6 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,723 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Visually compared the generated edit with the original: the eight-node arrangement, upright rounded square, robot and connector paths are retained, with darker olive robot/lines and lighter sage nodes and shading. Pixel-identical geometry is not claimed for the generative edit.
+- Safari desktop light/system: confirmed the complete shaded logo renders beside the wordmark without disturbing navigation. Dark brightness is configured centrally, but the selector interaction did not switch themes; a new dark visual review is not claimed. No mobile-width review was performed.
+- Matching 32px and 192px PNG favicon assets use the base helper and new filenames. Safari still showed its cached tab icon; refreshed browser-tab rendering is not claimed. Source and exact built-in generation prompt are in `BRANDING.md`.
+
+## Branding cleanup - 6 November 2026
+
+- Removed the four superseded simplified-logo PNGs and old `public/favicon.svg`; updated the root redirect page to the current favicon. Original reference, recoloured master and three active image assets remain.
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,723 internal links/assets; all 5 calendar cases passed. `git diff --check` passed. No references to deleted assets remain in source or current branding documentation.
+- No layout change or new browser review; no deployment or push occurred.
+
+## Favicon compatibility - 6 November 2026
+
+- Existing 32px PNG and new versioned ICO URLs returned HTTP 200 with correct image/png and image/x-icon types. The ICO contains 16px, 32px and 48px entries; the Apple touch icon is 180px. Both were resized from the current recoloured master without redesign.
+- Added shared `Favicon.astro` declarations, including versioned URLs, to the root redirect and main layout. Conventional root `favicon.ico` and `apple-touch-icon.png` are available too. Apple icon guidance: https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+- Safari desktop: opened a fresh tab at http://localhost:4321/sl/ and visually confirmed the current eight-node olive logo beside the tab title. The existing 127.0.0.1 tab still showed the old icon, consistent with retained browser favicon state. Browser caches/settings were not cleared or changed.
+- `npm run verify` passed: 0 errors/warnings/hints across 25 files; 78 static pages, 76 translated routes, 2,880 internal links/assets; all 5 calendar cases passed. `git diff --check` passed. No deployment or push occurred.
+
+## Footer wordmark - 6 November 2026
+
+- Footer lab suffix now uses font-weight 450, matching the header. The dot retains its brand colour and agentic retains the existing bold weight. Shared footer applies to both languages.
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,880 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Safari desktop: visually confirmed the Slovenian homepage footer displays bold agentic with a lighter lab suffix, with normal footer spacing. No additional mobile/theme review, deployment or push.

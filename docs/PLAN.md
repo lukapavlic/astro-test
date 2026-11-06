@@ -56,3 +56,32 @@
 
 - [x] Correct Viktor Taneski’s and Lidija Vincekovič’s roles in both languages, including descriptions referring to the old role.
 - [x] Run verification and inspect the updated profiles in Safari.
+
+## Reference-derived logo — 6 November 2026
+
+- [x] Generate a simplified transparent mark from the user’s supplied robot/diamond image; preserve reference and generated master.
+- [x] Replace the header symbol with a theme-aware brand-colour mask and add matching 32px/192px PNG favicon links through the base helper.
+- [x] Run `npm run verify` and review the header in Safari light/system and dark appearances.
+
+## Logo colour-only revision - 6 November 2026
+
+- [x] Replace the simplified mark with a recoloured version retaining all eight nodes, the robot, connectors and shading.
+- [x] Display the shaded image in the header and regenerate matching favicon assets with distinct URLs.
+- [x] Run verification and inspect the revised header in Safari.
+
+## Branding cleanup - 6 November 2026
+
+- [x] Remove the four superseded simplified-logo PNG files and old SVG favicon.
+- [x] Point the root redirect page to the current recoloured favicon; preserve the original reference and current master.
+- [x] Run verification.
+
+## Favicon compatibility - 6 November 2026
+
+- [x] Verify the existing PNG response and inspect Safari favicon rendering.
+- [x] Add a multi-resolution root ICO fallback and Apple touch icon from the existing recoloured master; share versioned favicon declarations between the redirect and layout.
+- [x] Run verification and confirm the current logo appears in a fresh Safari tab.
+
+## Footer wordmark - 6 November 2026
+
+- [x] Match the header's 450 weight for the footer lab suffix, preserving the bold agentic prefix and brand-coloured dot.
+- [x] Run verification and review the footer in Safari.

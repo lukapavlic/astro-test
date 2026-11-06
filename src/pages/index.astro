@@ -1,4 +1,5 @@
 ---
-import {href,asset} from '../lib/site';
+import {href} from '../lib/site';
+import Favicon from '../components/Favicon.astro';
 ---
-<!doctype html><html lang="sl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="refresh" content={`0;url=${href('sl')}`}/><title>Agentic Lab</title><meta name="description" content="Agentic Lab — raziskovanje sodobnega programskega inženirstva in agentov UI na UM FERI."/><link rel="icon" href={asset('favicon.svg')}/></head><body><a href={href('sl')}>Agentic Lab · Slovenščina</a><a href={href('en')}>English</a></body></html>
+<!doctype html><html lang="sl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="refresh" content={`0;url=${href('sl')}`}/><title>Agentic Lab</title><meta name="description" content="Agentic Lab — raziskovanje sodobnega programskega inženirstva in agentov UI na UM FERI."/><Favicon /></head><body><a href={href('sl')}>Agentic Lab · Slovenščina</a><a href={href('en')}>English</a></body></html>
