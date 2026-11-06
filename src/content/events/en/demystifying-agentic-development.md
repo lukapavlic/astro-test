@@ -5,12 +5,13 @@ title: "Building IT Applications and Services with AI Agents"
 shortDescription: "From Conversational AI to Autonomous Collaboration with Agents in the Development Process"
 date: "2026-12-03T09:00:00+01:00"
 endDate: "2026-12-03T13:00:00+01:00"
-location: "Maribor — location to be announced"
+location: "UM FERI, Koroška cesta 46, 2000 Maribor"
 eventType: "public-talk"
 status: "upcoming"
 demo: false
 featured: true
-price: "Free"
+registrationUrl: "https://digi-si.eu/izobrazevanja/gradimo-informacijske-re%C5%A1itve-in-storitve-z-agenti-ui"
+price: "Pricing and conditions on DIGI-SI"
 order: 1
 ---
 
@@ -36,4 +37,6 @@ The lecture is intended for developers, IT professionals, and companies that wan
 
 ## Practical information
 
-Admission is free. Maribor — location to be announced.
+The event takes place at UM FERI, Koroška cesta 46, 2000 Maribor.
+
+[Register through DIGI-SI](https://digi-si.eu/izobrazevanja/gradimo-informacijske-re%C5%A1itve-in-storitve-z-agenti-ui), where you can also find pricing, funding options and participation conditions for your organisation type.

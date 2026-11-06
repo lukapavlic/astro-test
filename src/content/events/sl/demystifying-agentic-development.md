@@ -5,12 +5,13 @@ title: "Gradimo informacijske rešitve in storitve z agenti UI"
 shortDescription: "Od klepeta z umetno inteligenco do avtonomnega sodelovanja z agenti v razvojnem procesu"
 date: "2026-12-03T09:00:00+01:00"
 endDate: "2026-12-03T13:00:00+01:00"
-location: "Maribor — lokacija bo objavljena naknadno"
+location: "UM FERI, Koroška cesta 46, 2000 Maribor"
 eventType: "public-talk"
 status: "upcoming"
 demo: false
 featured: true
-price: "Brezplačno"
+registrationUrl: "https://digi-si.eu/izobrazevanja/gradimo-informacijske-re%C5%A1itve-in-storitve-z-agenti-ui"
+price: "Cena in pogoji na DIGI-SI"
 order: 1
 ---
 
@@ -36,4 +37,6 @@ Predavanje je namenjeno razvijalcem, strokovnjakom s področja informacijskih te
 
 ## Praktične informacije
 
-Udeležba je brezplačna. Maribor — lokacija bo objavljena naknadno.
+Dogodek bo potekal na UM FERI, Koroška cesta 46, 2000 Maribor.
+
+[Prijave potekajo prek DIGI-SI](https://digi-si.eu/izobrazevanja/gradimo-informacijske-re%C5%A1itve-in-storitve-z-agenti-ui), kjer so objavljeni tudi cena, možnosti subvencioniranja in pogoji udeležbe glede na vrsto organizacije.

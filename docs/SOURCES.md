@@ -89,3 +89,7 @@ Research and publication associations are editorial topic links, not claims that
 ## People tags updated on 5 November 2026
 
 The user supplied the added research-interest tags for Luka Pavlič (software engineering and agile development methods), Marjan Heričko (software architecture, software quality and DevOps / DevSecOps), and Luka Četina (DevOps / DevSecOps and software engineering). Both languages are updated. “Agilne metode” / “Agile Methods” is renamed to “Metode agilnega razvoja” / “Agile Development Methods”. These direct user instructions supersede earlier statements about absent research-interest detail for these tags.
+
+## Event registration — 6 November 2026
+
+The user supplied the registration URL for `demystifying-agentic-development`: https://digi-si.eu/izobrazevanja/gradimo-informacijske-re%C5%A1itve-in-storitve-z-agenti-ui. The web reader could not access it; direct HTTP retrieval returned the event page and registration form. It confirms 3 December 2026, 09:00–13:00 and UM FERI, Koroška cesta 46, 2000 Maribor. Published form pricing varies by organisation type (subsidised options and paid attendance), superseding the earlier unconditional free-admission wording. Both translations direct readers to DIGI-SI for current pricing, funding and conditions rather than copying a potentially changing tariff. No registration was submitted.

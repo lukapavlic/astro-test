@@ -89,3 +89,11 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 - `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets and all 5 calendar cases.
 - Generated-HTML assertions confirmed all tags render on the three updated profiles in both languages, without duplicate tags. No old “Agilne metode” / “Agile Methods” label remains in people content.
 - Safari desktop visual review of Luka Pavlič’s English profile confirmed the seven tags wrap cleanly, including Software Engineering and Agile Development Methods. Other profiles were checked in generated HTML; no additional mobile or theme review was performed.
+
+## Event registration — 6 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints across 24 files; 78 static pages, 76 translated routes, 2,569 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Generated-HTML assertions confirmed the registration CTA and exact DIGI-SI destination on both homepages, both event lists and both event details.
+- Safari desktop visual review: inspected the Slovenian event detail and its registration button beneath the metadata; inspected the English event list with the registration button beside the event-details link. Buttons, venue and pricing text render cleanly. Safari accessibility state confirmed the exact registration destination.
+- The development server initially omitted the new schema field; changing the content-config comment triggered a full resync and the CTA then appeared. Static generation already contained the field.
+- No mobile-width or additional theme audit was performed. No registration was submitted, and no deployment or push occurred.

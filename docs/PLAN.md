@@ -40,3 +40,9 @@
 
 - [x] Update the user-specified tags for Luka Pavlič, Marjan Heričko and Luka Četina in both languages, including the agile development methods label.
 - [x] Run verification, confirm all six generated profiles and visually inspect tag wrapping on Luka Pavlič’s English profile in Safari.
+
+## Event registration — 6 November 2026
+
+- [x] Add the user-supplied DIGI-SI registration URL to both translations and expose it on featured event cards and event details.
+- [x] Update the venue and replace unconditional free-admission wording with pricing/conditions on DIGI-SI, based on the published registration page.
+- [x] Run verification and inspect the updated pages in Safari.
