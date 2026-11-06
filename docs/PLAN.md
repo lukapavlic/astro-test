@@ -46,3 +46,13 @@
 - [x] Add the user-supplied DIGI-SI registration URL to both translations and expose it on featured event cards and event details.
 - [x] Update the venue and replace unconditional free-admission wording with pricing/conditions on DIGI-SI, based on the published registration page.
 - [x] Run verification and inspect the updated pages in Safari.
+
+## Footer institutional links — 6 November 2026
+
+- [x] Link the laboratory, institute, faculty and university names in both languages to the requested institutional destinations; use the supplied institute domain for the repeated-name URL omission.
+- [x] Run verification and inspect the footer in Safari.
+
+## People roles — 6 November 2026
+
+- [x] Correct Viktor Taneski’s and Lidija Vincekovič’s roles in both languages, including descriptions referring to the old role.
+- [x] Run verification and inspect the updated profiles in Safari.

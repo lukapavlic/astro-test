@@ -2,10 +2,10 @@
 lang: "en"
 key: "lidija-vincekovic"
 title: "Lidija Vincekovič"
-shortDescription: "Lidija is a teaching assistant in the Information Systems Laboratory at UM FERI. Her official institutional profile is linked below for professional information and contact."
+shortDescription: "Lidija is an early-career researcher in the Information Systems Laboratory at UM FERI. Her official institutional profile is linked below for professional information and contact."
 name: "Lidija Vincekovič"
 labRole: "Member"
-academicRole: "Teaching Assistant"
+academicRole: "Early-career Researcher"
 affiliation: "UM FERI · LIS"
 email: "lidija.vincekovic@um.si"
 feriUrl: "https://ii.feri.um.si/sl/person/lidija-vincekovic/"
@@ -14,4 +14,4 @@ memberType: "core"
 order: 7
 ---
 
-Lidija is a teaching assistant in the Information Systems Laboratory at UM FERI. Her official institutional profile is linked below for professional information and contact.
+Lidija is an early-career researcher in the Information Systems Laboratory at UM FERI. Her official institutional profile is linked below for professional information and contact.

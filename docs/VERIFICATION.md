@@ -97,3 +97,15 @@ No Playwright/Lighthouse/axe audit, real-device test, broad cross-browser test o
 - Safari desktop visual review: inspected the Slovenian event detail and its registration button beneath the metadata; inspected the English event list with the registration button beside the event-details link. Buttons, venue and pricing text render cleanly. Safari accessibility state confirmed the exact registration destination.
 - The development server initially omitted the new schema field; changing the content-config comment triggered a full resync and the CTA then appeared. Static generation already contained the field.
 - No mobile-width or additional theme audit was performed. No registration was submitted, and no deployment or push occurred.
+
+## Footer institutional links — 6 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Safari desktop: visually inspected the English footer; laboratory, institute and faculty names retain their line spacing, and the university is a separate correctly labelled link. Accessibility state confirmed all four destinations. Shared bilingual template applies the same URLs to Slovenian labels.
+- The institute URL was omitted in the request (its name was repeated); the supplied `https://ii.feri.um.si/sl/` is used for both laboratory and institute, including the existing bottom-row institute link. No mobile-width or additional theme review was performed.
+
+## People roles — 6 November 2026
+
+- `npm run verify` passed: 0 errors/warnings/hints; 78 static pages, 76 translated routes, 2,569 internal links/assets; all 5 calendar cases passed. `git diff --check` passed.
+- Generated HTML confirms corrected roles in all four translated profiles and both people lists. Lidija’s short description and body also use the new role.
+- Safari desktop: visually inspected Lidija’s Slovenian profile, including the role and updated description; accessibility state confirmed Viktor’s Slovenian profile says Docent. No mobile-width or additional theme review was performed.
